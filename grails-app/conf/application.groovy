@@ -1,0 +1,1 @@
+//import grails.plugin.springsecurity.*
