@@ -3,6 +3,7 @@ package grails.web.practice
 class UserController {
 
     def userService
+    CountryService countryService
     static allowedMethods = [save: "POST", create: "GET"]
 
     def index() {
@@ -36,5 +37,10 @@ class UserController {
                 redirect action: "home", method: "GET"
             }
         }
+    }
+
+    def fetchCountries() {
+        println("fetching countries from the API ....")
+        countryService.fetchCountries()
     }
 }

@@ -6,7 +6,6 @@ import grails.gorm.transactions.Transactional
 class UserService {
 
     def serviceMethod() {
-
     }
 
     def registerUser(User user) {
