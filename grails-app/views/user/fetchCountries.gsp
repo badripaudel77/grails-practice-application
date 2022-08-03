@@ -49,6 +49,8 @@
             </tr>
         </g:each>
         </table>
+        <!-- REF : http://docs.grails.org/3.1.1/ref/Tags/paginate.html -->
+        <g:paginate next="Forward" prev="Back" total="${total}" />
     </g:if>
 
     <g:else test="!${countries}">

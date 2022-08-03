@@ -3,7 +3,7 @@ package grails.web.practice
 class UserController {
 
     def userService
-    CountryService countryService
+    def countryService
     static allowedMethods = [save: "POST", create: "GET"]
 
     def index() {
