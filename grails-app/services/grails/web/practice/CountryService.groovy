@@ -24,6 +24,6 @@ class CountryService {
             countryList.add(country)
         }
         println("data is found.... ")
-        [countries : countryList]
+        [countries : countryList, total : countryList.size()]
     }
 }
