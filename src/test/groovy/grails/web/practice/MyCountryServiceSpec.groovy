@@ -1,4 +1,4 @@
-package grails.web.practice.services.countries
+package grails.web.practice
 
 import grails.testing.services.ServiceUnitTest
 import grails.web.practice.MyCountryService
