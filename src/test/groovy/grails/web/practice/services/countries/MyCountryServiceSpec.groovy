@@ -1,10 +1,10 @@
-package grails.web.practice
+package grails.web.practice.services.countries
 
 import grails.testing.services.ServiceUnitTest
-import grails.web.practice.services.countries.CountryService
+import grails.web.practice.MyCountryService
 import spock.lang.Specification
 
-class CountryServiceSpec extends Specification implements ServiceUnitTest<CountryService>{
+class MyCountryServiceSpec extends Specification implements ServiceUnitTest<MyCountryService>{
 
     def setup() {
     }

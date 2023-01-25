@@ -7,7 +7,7 @@ import utils.Country
 // REF : https://github.com/grails-plugins/grails-rest-client-builder
 
 @Transactional
-class CountryService {
+class MyCountryService {
     def serviceMethod() {
 
     }

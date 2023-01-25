@@ -3,7 +3,7 @@ package grails.web.practice
 class UserController {
 
     def userService
-    def countryService
+    def myCountryService
     static allowedMethods = [save: "POST", create: "GET"]
 
     def index() {
@@ -41,6 +41,6 @@ class UserController {
 
     def fetchCountries() {
         println("fetching countries from the API ....")
-        countryService.fetchCountries()
+        myCountryService.fetchCountries()
     }
 }
