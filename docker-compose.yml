@@ -2,8 +2,8 @@ version: '3.1'
 services:
   application:
     build: . # or build the image from the dockerfile located at the current directory
-#    container_name: grails_web_full_stack
-#    image: grails_web
+    container_name: grails_web_full_stack
+    image: grails_web
     ports:
       - "8000:8090"
     # This APP services depends upon postgres Service
