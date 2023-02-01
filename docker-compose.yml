@@ -1,0 +1,44 @@
+version: '3.1'
+services:
+  application:
+    build: . # or build the image from the dockerfile located at the current directory
+#    container_name: grails_web_full_stack
+#    image: grails_web
+    ports:
+      - "8000:8090"
+    # This APP services depends upon postgres Service
+    depends_on:
+      [database_grails_web]
+    restart: always
+
+    #Define Environment
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://database_grails_web:5432/grails_web
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=_BadriPostgres1@
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  database_grails_web:
+
+    #official image of postgres from the docker hub, by default pulls the latest one.
+    image: postgres:14
+
+#    # map the ports for postgres
+    ports:
+      - "5432:5432"
+    volumes:
+            - grails_web_db:/var/lib/postgresql/data
+
+    # define environments for the postgres
+    environment:
+      - POSTGRES_PASSWORD=_BadriPostgres1@
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=grails_web
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  grails_web_db:

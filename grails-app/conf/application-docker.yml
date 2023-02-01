@@ -1,6 +1,4 @@
 ---
-# to run in docker, use database_grails_web else localhost
-# or use the concept of profiles.
 grails:
   profile: web
   codegen:
