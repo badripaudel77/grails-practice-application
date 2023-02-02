@@ -100,7 +100,7 @@ environments:
   development:
     dataSource:
       dbCreate: update
-      url: jdbc:postgresql://database_grails_web:5432/grails_web
+      url: jdbc:postgresql://localhost:5432/grails_web
       pooled: true
       driverClassName: org.postgresql.Driver
       dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -109,7 +109,7 @@ environments:
   test:
     dataSource:
       dbCreate: update
-      url: jdbc:postgresql://database_grails_web:5432/grails_web
+      url: jdbc:postgresql://localhost:5432/grails_web
       pooled: true
       driverClassName: org.postgresql.Driver
       dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -118,7 +118,7 @@ environments:
   production:
     dataSource:
       dbCreate: update
-      url: jdbc:postgresql://database_grails_web:5432/grails_web
+      url: jdbc:postgresql://localhost:5432/grails_web
       pooled: true
       driverClassName: org.postgresql.Driver
       dialect: org.hibernate.dialect.PostgreSQLDialect

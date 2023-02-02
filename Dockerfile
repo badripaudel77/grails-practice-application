@@ -38,6 +38,8 @@ ENV PATH $GRAILS_HOME/bin:$PATH
 # copy everything in the current directory in the host machine to the current directory in the image
 WORKDIR /app
 COPY . /app
+# For docker use application-docker.yml
+COPY grails-app/conf/application-docker.yml /app/grails-app/conf/application.yml
 
 # Build WAR file as the war file is a standard format for packaging and deploying Java web applications.
 #RUN grails war
